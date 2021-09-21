@@ -31,3 +31,10 @@ elif Yellow == "nee":
         
         elif MoldCrust == "nee":
             print("Foume d'Amber")
+    elif NYellowMold == "nee":
+        NMoldCrust = input("Heeft de kaas een korst?")
+        if NMoldCrust == "ja":
+                print("Camembert")
+
+        elif NMoldCrust == "nee":
+                print("Mozzarella")
