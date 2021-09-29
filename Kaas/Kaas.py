@@ -34,7 +34,7 @@ elif Yellow == "nee":
     elif NYellowMold == "nee":
         NMoldCrust = input("Heeft de kaas een korst? ").lower()
         if NMoldCrust == "ja":
-                print("Camembert")
+            print("Camembert")
 
         elif NMoldCrust == "nee":
-                print("Mozzarella")
+            print("Mozzarella")
