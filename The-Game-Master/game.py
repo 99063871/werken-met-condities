@@ -35,7 +35,7 @@ def workOrRobberyfunc():
             numBstr = str(numB)
             question = input("Wat is " + numAstr + " + " + numBstr + "? ")
             anwserFrom = int(question)
-            anwser = numA + numB       
+            anwser = numA + numB  
             
         def questions():
             math()
