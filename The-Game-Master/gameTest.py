@@ -1,6 +1,8 @@
 import time
 import random
 
+work = "c"
+
 def varthing():
     global varA
     varA = varA + 1
@@ -54,13 +56,4 @@ if work == "a":
     time.sleep(2)
     print("Ik ga je een paar reken vragen stellen")
     math()
-    math()
-    math()
-
-
-
-
-
-
-
-
+    
