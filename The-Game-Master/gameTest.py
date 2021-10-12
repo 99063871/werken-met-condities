@@ -1,12 +1,11 @@
 import time
 import random
 
-work = "c"
+work = "a"
 
 def varthing():
     global varA
     varA = varA + 1
-    print(varA)
 
 def math():
     numA =  random.randint(1, 1000)
@@ -17,7 +16,6 @@ def math():
     anwserFrom = int(question)
     anwser = numA + numB
     if anwserFrom == anwser:
-        print("goed gedaan kut")
         varthing()
 
 work = 0
@@ -41,19 +39,34 @@ time.sleep(3)
 print("Een bank overval!")
 time.sleep(3)
 
-def workOrRobberyfunc():
+def workOrRobberyFunc():
     workOrRobbery = input("Wat wil je gaan doen? \nA=Werken \nB=Bankoverval \n").lower()
     if workOrRobbery == "a":
         work = input("Waar wil je werken? \nA=Donimos \nB=KFC \n").lower()
         time.sleep(1)
+        if work == "a":
+            print("Je gaat naar Donimos om te solliciteren")
+            time.sleep(2)
+            print("Je hebt geluk en je kan gelijk een gesprek hebben!")
+            time.sleep(2)
+            print("Ik ga je een paar reken vragen stellen")
+            math()
+            math()
+            math()
+        elif work == "b":
+            print("Je gaat naar KFC om te solliciteren")
+            time.sleep(2)
+            print("Je hebt geluk en je kan gelijk een gesprek hebben!")
+            time.sleep(2)
+            print("Ik ga je een paar reken vragen stellen")
+            math()
+            math()
+            math()
+        else:
+            print("Dat ging niet helemaal goed probeer het nog eens")
+            workOrRobberyFunc()
+            if varA == "3":
+                print("Dat ging heel goed je bent aangenomen!")
+                time.sleep
+workOrRobberyFunc()
 
-workOrRobberyfunc()
-
-if work == "a":
-    print("Je gaat naar Donimos om te solliciteren")
-    time.sleep(2)
-    print("Je hebt geluk en je kan gelijk een gesprek hebben!")
-    time.sleep(2)
-    print("Ik ga je een paar reken vragen stellen")
-    math()
-    
