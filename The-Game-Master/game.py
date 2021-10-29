@@ -22,7 +22,6 @@ def math():
         varthing()
 
 def cops():
-    print("hi")
     alarm = random.randint(1, 100)
     if alarm < 80:
         print("Je rent naar de deur en je ziet politie.")
@@ -121,22 +120,38 @@ def workOrRobberyFunc():
             time.sleep(2)
             print("Je zal nooit je droom auto krijgen ):")
 
-        elif workOrRobbery == "b":
-            print("Oke dus je wilt een bank overvallen.")
+    elif workOrRobbery == "b":
+        print("Oke dus je wilt een bank overvallen.")
+        time.sleep(2)
+        print("Dan heb je wel een paar dingen nodig zoals:Een outfit, een wapen en een tas.")
+        time.sleep(3)
+        print("Wat heb je allemaal gevonden?\nEen zwart trainings pak met een ski masker, een grote tas en 3 mogelijke wapens")
+        time.sleep(2)
+        weapon = input("A=Een handpistool \nB=een katana \nC=een lepel\n").lower()
+        time.sleep(2)
+        print("Je doet je overval kleding aan en gaat naar de bank")
+        time.sleep(5)
+        print("Je komt aan bij de bank")
+        time.sleep(2)
+        print('Je rent naar binnen en roept"DIT IS EEN OVERVAL"')
+        time.sleep(2)
+        if weapon == "a": #Handpistool
+            print("De bankmedewerkers kijken je bang aan")
             time.sleep(2)
-            print("Dan heb je wel een paar dingen nodig zoals:Een outfit, een wapen en een tas.")
-            time.sleep(3)
-            print("Wat heb je allemaal gevonden?\nEen zwart trainings pak met een ski masker, een grote tas en 3 mogelijke wapens")
+            print('Je zegt"gooi al het geld in deze tas"terwijl je een tas op de tafel zet.')
             time.sleep(2)
-            weapon = input("A=Een handpistool \nB=een katana \nC=een lepel\n").lower()
+            print("Al het geld is in de tas gegooid")
             time.sleep(2)
-            print("Je doet je overval kleding aan en gaat naar de bank")
-            time.sleep(5)
-            print("Je komt aan bij de bank")
-            time.sleep(2)
-            print('Je rent naar binnen en roept"DIT IS EEN OVERVAL"')
-            time.sleep(2)
-            if weapon == "a": #Handpistool
+            cops()
+        elif weapon == "b": #Katana
+            glass = random.randint(1, 100)
+            if glass < 50:
+                print("De bankmedewerkers lachen naar je en bellen de politie")
+                time.sleep(2)
+                print("Je bent gepakt, sommige banken hebben dus glas tussen jou en de bankmedewerkers")
+                time.sleep(3)
+                print("Succes in de gevangenis")
+            elif glass > 50:
                 print("De bankmedewerkers kijken je bang aan")
                 time.sleep(2)
                 print('Je zegt"gooi al het geld in deze tas"terwijl je een tas op de tafel zet.')
@@ -144,48 +159,26 @@ def workOrRobberyFunc():
                 print("Al het geld is in de tas gegooid")
                 time.sleep(2)
                 cops()
-            elif weapon == "b": #Katana
-                glass = random.randint(1, 100)
-                if glass < 50:
-                    print("De bankmedewerkers lachen naar je en bellen de politie")
-                    time.sleep(2)
-                    print("Je bent gepakt, sommige banken hebben dus glas tussen jou en de bankmedewerkers")
-                    time.sleep(3)
-                    print("Succes in de gevangenis")
-                elif glass > 50:
-                    print("De bankmedewerkers kijken je bang aan")
-                    time.sleep(2)
-                    print('Je zegt"gooi al het geld in deze tas"terwijl je een tas op de tafel zet.')
-                    time.sleep(2)
-                    print("Al het geld is in de tas gegooid")
-                    time.sleep(2)
-                    cops()
-            elif weapon == "c": #Lepel
-                spoon = random.randint(1, 100)
-                if spoon < 99:
-                    print("De bankmedewerkers lachen naar je")
-                    time.sleep(2)
-                    print("Tja wat had je ook verwacht van een lepel...")
-                    time.sleep(2)
-                    print("Mission failed")
-                elif spoon > 99:
-                    print("Wow...")
-                    time.sleep(2)
-                    print("Wat heb jij een geluk")
-                    time.sleep(2)
-                    print("Het is je gewoon gelukt met een lepel")
-                    time.sleep(2)
-                    print("Je gaat naar de auto dealer en koopt je droom auto")
-                    time.sleep(3)
-                    print("De fiat multipla!")
-
-
-
-    else:
-        print("Dat ging niet helemaal goed probeer het nog eens")
-        workOrRobberyFunc()
-
-        
-
+        elif weapon == "c": #Lepel
+            spoon = random.randint(1, 100)
+            if spoon < 99:
+                print("De bankmedewerkers lachen naar je")
+                time.sleep(2)
+                print("Tja wat had je ook verwacht van een lepel...")
+                time.sleep(2)
+                print("Mission failed")
+            elif spoon > 99:
+                print("Wow...")
+                time.sleep(2)
+                print("Wat heb jij een geluk")
+                time.sleep(2)
+                print("Het is je gewoon gelukt met een lepel")
+                time.sleep(2)
+                print("Je gaat naar de auto dealer en koopt je droom auto")
+                time.sleep(3)
+                print("De fiat multipla!")
+        else:
+            print("Dat ging niet helemaal goed probeer het nog eens")
+            workOrRobberyFunc()
 
 workOrRobberyFunc()
